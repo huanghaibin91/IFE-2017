@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.container {
+  width: 980px;
+  height: 1386px; }
+  .container, .container .main {
+    width: 892px;
+    margin: auto; }
+
+header {
+  border-bottom: 2px solid #938e8c; }
+  header div {
+    width: 110px;
+    height: 61px;
+    background-color: #D45C5B; }
+  header p, header span {
+    font-family: "SimHei";
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    position: relative;
+    bottom: -45px; }
+  header span {
+    color: #d45d5c;
+    float: right; }
+
+.banner {
+  margin: 35px auto; }
+  .banner .banner-left {
+    overflow: hidden;
+    width: 641px;
+    line-height: 16px; }
+    .banner .banner-left > div {
+      margin-top: 25px; }
+      .banner .banner-left > div > div {
+        width: 188px;
+        margin-right: 25px;
+        float: left; }
+        .banner .banner-left > div > div h4 {
+          text-decoration: underline;
+          font-size: 16px;
+          margin-bottom: 5px;
+          font-family: "Microsoft YaHei";
+          font-weight: bold; }
+        .banner .banner-left > div > div:nth-child(1) h4 {
+          color: #418c59; }
+        .banner .banner-left > div > div:nth-child(2) h4 {
+          color: #d2994f; }
+        .banner .banner-left > div > div:nth-child(3) h4 {
+          color: #cc7680; }
+        .banner .banner-left > div > div p {
+          font-size: 12px;
+          color: #767777;
+          font-family: "SimSun"; }
+  .banner .banner-right {
+    width: 203px;
+    border-top: 2px solid #cc8092;
+    float: right; }
+    .banner .banner-right > p:nth-child(1), .banner .banner-right > p:nth-child(2) {
+      font-family: "Microsoft YaHei";
+      font-size: 24px;
+      text-decoration: underline;
+      line-height: 40px; }
+      .banner .banner-right > p:nth-child(1):first-letter, .banner .banner-right > p:nth-child(2):first-letter {
+        font-size: 28px; }
+    .banner .banner-right > p:nth-child(3) {
+      font-family: "KaiTi";
+      font-size: 12px;
+      line-height: 10px;
+      color: #676767; }
+    .banner .banner-right > p:nth-child(4) {
+      font-family: "Microsoft YaHei";
+      font-size: 116px;
+      color: #75b86b;
+      font-style: oblique;
+      line-height: 135px;
+      text-indent: -17px; }
+    .banner .banner-right > div {
+      font-family: "Microsoft YaHei";
+      color: #cc8091; }
+      .banner .banner-right > div p {
+        display: inline-block;
+        width: 40%; }
+      .banner .banner-right > div p:nth-child(1) {
+        font-size: 55px; }
+      .banner .banner-right > div p:nth-child(2) span {
+        font-size: 21px; }
+      .banner .banner-right > div p:nth-child(2) small {
+        font-size: 12px; }
+
+/*# sourceMappingURL=style.css.map */

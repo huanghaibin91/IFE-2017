@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(222, 222, 222);
+}
+header {
+    min-width: 700px;
+    background-color: rgb(51, 51, 51);
+    height: 60px;
+    h1 {
+        width: 120px;
+        height: 60px;
+        float: left;
+    }
+    ul {
+        float: right;
+        li {
+            float: left;
+            a {
+                display: inline-block;
+                width: 100px;
+                height: 60px;
+                line-height: 60px;
+                text-decoration: none;
+                color: white;
+                &:hover {
+                    color: rgb(161, 161, 161);
+                }
+            }
+        }
+    }
+}
+article, aside {
+    margin: 20px;
+    margin-right: 380px;
+    padding: 40px 20px;
+    background-color: white;
+    line-height: 2;
+    box-shadow: 2px 2px 2px rgb(159, 159, 159);
+    h3, small {
+        color: rgb(100, 100, 100);
+    }
+    p {
+        text-indent: 2em;
+    }
+    ul, ol {
+        margin: 20px 40px;
+    }
+    ul {
+        list-style: none;
+    }
+}
+div.img {
+    width: 240px;
+    height: 240px;
+    border: 1px solid rgb(203, 203, 203);
+    margin: 20px;
+    text-align: center;
+    img {
+        width: 200px;
+        height: 200px;
+    }
+}
+table {
+    text-align: center;
+    border-collapse: collapse;
+    width: 100%;
+    thead, tfoot {
+        font-weight: bold;
+    }
+    thead {
+        background-color: rgb(51, 51, 51);
+        color: white; 
+    }
+    tfoot {
+        border: none;
+        background: rgb(204, 204, 204);
+    }
+}
+aside {
+    width: 300px;
+    font-size: 14px;
+    position: absolute;
+    top: 60px;
+    right: -360px;
+    h2 {
+        padding-left: 20px;
+        border-left: 3px solid rgb(204, 204, 204);
+    }
+    label, div {
+        display: inline-block;
+        width: 40%;
+    }
+    input {
+        padding: 5px;
+    }
+    label {
+        padding: 10px;
+        text-align: right;
+    }
+    textarea, div {
+        vertical-align: text-top;
+    }
+    textarea {
+        padding: 5px;
+    }
+    button {
+        display: block;
+        border: none;
+        width: 80%;
+        height: 40px;
+        margin: 20px auto;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 40px;
+        background-color: rgb(51, 85, 208);
+        border-radius: 10px;
+    }
+}
+footer {
+    height: 70px;
+    color: white;
+    line-height: 70px;
+    text-align: center;
+    background-color: rgb(51, 51, 51);
+}

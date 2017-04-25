@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #dedede; }
+
+header {
+  min-width: 700px;
+  background-color: #333333;
+  height: 60px; }
+  header h1 {
+    width: 120px;
+    height: 60px;
+    float: left; }
+  header ul {
+    float: right; }
+    header ul li {
+      float: left; }
+      header ul li a {
+        display: inline-block;
+        width: 100px;
+        height: 60px;
+        line-height: 60px;
+        text-decoration: none;
+        color: white; }
+        header ul li a:hover {
+          color: #a1a1a1; }
+
+article, aside {
+  margin: 20px;
+  margin-right: 380px;
+  padding: 40px 20px;
+  background-color: white;
+  line-height: 2;
+  box-shadow: 2px 2px 2px #9f9f9f; }
+  article h3, article small, aside h3, aside small {
+    color: #646464; }
+  article p, aside p {
+    text-indent: 2em; }
+  article ul, article ol, aside ul, aside ol {
+    margin: 20px 40px; }
+  article ul, aside ul {
+    list-style: none; }
+
+div.img {
+  width: 240px;
+  height: 240px;
+  border: 1px solid #cbcbcb;
+  margin: 20px;
+  text-align: center; }
+  div.img img {
+    width: 200px;
+    height: 200px; }
+
+table {
+  text-align: center;
+  border-collapse: collapse;
+  width: 100%; }
+  table thead, table tfoot {
+    font-weight: bold; }
+  table thead {
+    background-color: #333333;
+    color: white; }
+  table tfoot {
+    border: none;
+    background: #cccccc; }
+
+aside {
+  width: 300px;
+  font-size: 14px;
+  position: absolute;
+  top: 60px;
+  right: -360px; }
+  aside h2 {
+    padding-left: 20px;
+    border-left: 3px solid #cccccc; }
+  aside label, aside div {
+    display: inline-block;
+    width: 40%; }
+  aside input {
+    padding: 5px; }
+  aside label {
+    padding: 10px;
+    text-align: right; }
+  aside textarea, aside div {
+    vertical-align: text-top; }
+  aside textarea {
+    padding: 5px; }
+  aside button {
+    display: block;
+    border: none;
+    width: 80%;
+    height: 40px;
+    margin: 20px auto;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 40px;
+    background-color: #3355d0;
+    border-radius: 10px; }
+
+footer {
+  height: 70px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background-color: #333333; }
+
+/*# sourceMappingURL=style.css.map */
