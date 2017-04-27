@@ -1,0 +1,186 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+@mixin fontSet($size, $color, $weight) {
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+}
+header {
+    text-align: center;
+    height: 10vw;
+    position: relative;
+    background-color: #91D4DA;
+    h1 {
+        @include fontSet(4vw, white, 500);
+        line-height: 10vw;
+    }
+    button {
+        border: none;
+        width: 12vw;
+        height: 6vw;
+        background: #91D4DA;
+        position: absolute;
+        top: 2vw;
+        left: 0;
+        @include fontSet(3vw, white, 500);
+    }
+}
+.banner img {
+    width: 100%;
+    height: auto;
+}
+nav {
+    display: flex;
+    a {
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        width: 20vw;
+        height: 10vw;
+        box-sizing: border-box;
+        text-decoration: none;
+        @include fontSet(3vw, black, normal);
+        line-height: 10vw;
+        text-align: center;
+        &.active {
+            border-bottom: 1vw solid #91D4DA;
+        }
+    }
+}
+.tag {
+    display: flex;
+    text-align: center;
+    margin: 3vw 0;
+    >div {
+        width: 20%;
+        img {
+            width: 50%;
+            height: auto;
+        }
+        p {
+            box-sizing: border-box;
+            padding: 3vw;
+            @include fontSet(3vw, black, normal);
+        }
+    }
+}
+.part {
+    display: flex;
+    text-align: center;
+    margin: 3vw;
+    border-top: 2px solid #ccc;
+    >div {
+        width: 33.33%;
+        margin: 3vw 0;
+        box-sizing: border-box;
+        img {
+            width: auto;
+            height: 60%;
+        }
+        h3 {
+            @include fontSet(3vw, black, 600);
+            padding: 1vw;
+        }
+        h4 {
+            @include fontSet(2.5vw, #606060, 500);
+        }
+    }
+    >div:nth-child(2) {
+        border-right: 2px solid #ccc;
+        border-left: 2px solid #ccc;
+    }
+}
+.module {
+    border-top: 3vw solid #F5F5F5;
+    margin: 2vw;
+    h2 {
+        height: 8vw;
+        @include fontSet(3vw, #656565, bold);
+        line-height: 8vw;
+        border-bottom: 2px solid #ccc;
+    }
+    >div {
+        height: 25vw;
+        display: flex;
+        margin: 3vw 0;
+        div {
+            box-sizing: border-box;
+        }
+        div:nth-child(1) {
+            width: 25vw;
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+        div:nth-child(2) {
+            width: 75vw;
+            display: flex;
+            flex-wrap: wrap;
+            p {
+                box-sizing: border-box;
+                background-color: #F8F8F8;
+                width: 32.5vw;
+                height: 11vw;
+                margin-left: 3vw;
+                text-align: center;
+                line-height: 12.5vw;
+                @include fontSet(2vw, black, normal);
+            }
+            p:nth-child(3), p:nth-child(4) {
+                margin-top: 3vw;
+            }
+        }
+    }
+}
+article {
+    border-top: 3vw solid #F5F5F5;
+    h3 {
+         @include fontSet(5vw, #676767, normal);
+    }
+    p {
+        position: absolute;
+        bottom: 0;
+        @include fontSet(3vw, #C4C4C4, normal);
+    }
+    >div {
+        display: flex;
+        margin: 2vw;
+        height: 25vw;
+        border-bottom: 2px solid #ccc;
+        >div {
+            margin-bottom: 2vw;
+        }
+        >div:nth-child(1) {
+            width: 34vw;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        >div:nth-child(2) {
+            margin-left: 3vw;
+            width: 63vw;
+            position: relative;
+        }
+    }
+    .other {
+        display: block;
+        height: 35vw;
+        border: none;
+        position: relative;
+        .img {
+            margin: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            img {
+                padding-top: 3vw; 
+                width: 30vw;
+                height: 20vw;
+            }
+        }
+    }
+}
