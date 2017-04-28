@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.box {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    th, td {
+        padding: 10px;
+    }
+    thead {
+        background-color: black;
+        color: white;
+    }
+    tbody {
+        tr:nth-child(even) {
+            background-color: #C8CECA;
+        }
+        tr:nth-child(1), tr:nth-child(2), tr:nth-child(3){
+            color: red;
+        }
+    }
+}
+input {
+    width: 40%;;
+    height: 30px;
+    padding: 5px;
+    transition: all 1s;
+    &:focus {
+        box-shadow: 2px 2px 4px #8BBAE4;
+        width: 70%;
+    }
+}
+@keyframes move {
+    form {left: 0;}
+    16.66% {left: 0;}
+    33.32% {left: -100%;}
+    49.98% {left: -100%;}
+    66.64% {left: -200%;}
+    83.3% {left: -200%;}
+    100% {left: -300%;}
+
+}
+.banner {
+    margin: 0 auto;
+    width: 40vw;
+    height: 30vw;
+    overflow: hidden;
+    background-color: aqua;
+    position: relative;
+    ul {
+        width: 300%;
+        height: 100%;
+        position: relative;
+        animation: move 18s linear infinite;
+        li {
+            display: block;
+            width: 33.33%;
+            height: 100%;
+            float: left;
+        }
+    }
+    div {
+        width: 11vw;
+        height: 3vw;
+        position: absolute;
+        bottom: 0.5vw;
+        right: 0.3vw;
+        span {
+            display: inline-block;
+            width: 3vw;
+            height: 3vw;
+            font-size: 2vw;
+            color: white;
+            line-height: 3vw;
+            text-align: center;
+            margin-right: 0.2vw;
+            background-color: rgba(221, 221, 221, 0.8);
+        }
+    }
+}

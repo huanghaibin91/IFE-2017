@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task 17</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box,
+        #list {
+            text-align: center;
+            width: 85%;
+            margin: 10px auto;
+        }
+
+        #list {
+            height: 32vw;
+            padding: 1vw;
+            background-color: #eee;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        #list>div {
+            background-color: deepskyblue;
+            margin: 0.2vw;
+            font-size: 0.5vw;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <input id="input" type="text" name="" value="" placeholder="输入一个数字" />
+        <button type="button" id="left-in">左侧进</button>
+        <button type="button" id="right-in">右侧进</button>
+        <button type="button" id="left-out">左侧出</button>
+        <button type="button" id="right-out">右侧出</button>
+        <button type="button" id="max">排序（从小到大）</button>
+        <button type="button" id="min">排序（从大到小）</button>
+    </div>
+    <div id="list">
+    </div>
+    <!--script-->
+    <script>
+        // 添加删除排序元素
+        var _arr = [];
+
+        function list(target, value) {
+            var list = document.querySelector('#list');
+            var id = target.id;
+            var div = document.createElement('div');
+            div.style.width = '1vw';
+            div.style.height = value + '%';
+            var p = document.createElement('p');
+            p.innerHTML = value;
+            div.appendChild(p);
+            switch (id) {
+                case 'left-in':
+                    if (typeof value == 'number') {
+                        if (value >= 10 && value <= 100) {
+                            list.insertBefore(div, list.querySelector('div'));
+                            _arr.unshift(value);
+                        } else {
+                            alert('请输入范围10-100的数字');
+                        }
+                    }
+                    break;
+                case 'right-in':
+                    if (typeof value == 'number') {
+                        if (value >= 10 && value <= 100) {
+                            list.appendChild(div);
+                            _arr.push(value);
+                        } else {
+                            alert('请输入范围10-100的数字');
+                        }
+                    }
+                    break;
+                case 'left-out':
+                    list.removeChild(list.querySelector('div'));
+                    _arr.shift();
+                    break;
+                case 'right-out':
+                    list.removeChild(list.lastChild);
+                    _arr.pop();
+                    break;
+                case 'max':
+                    var arr = _arr.sort(function (x, y) {
+                        return x - y;
+                    });
+                    var allDiv = list.querySelectorAll('div');
+                    for (var i = 0; i < allDiv.length; i++) {
+                        allDiv[i].style.height = arr[i] + '%';
+                    }
+                    break;
+                case 'min':
+                    var arr = _arr.sort(function (x, y) {
+                        return y - x;
+                    });
+                    var allDiv = list.querySelectorAll('div');
+                    for (var i = 0; i < allDiv.length; i++) {
+                        allDiv[i].style.height = arr[i] + '%';
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+        // 点击按钮
+        function init() {
+            var box = document.querySelector('#box');
+            box.addEventListener('click', function (e) {
+                var target = e.target;
+                var input = document.querySelector('#input');
+                var num = parseInt(input.value);
+                if (_arr.length <= 60) {
+                    if (target.tagName == "BUTTON") {
+                        list(target, num);
+                        input.value = '';
+                    }
+                } else {
+                    alert('列表已到最大长度！')
+                }
+            }, false);
+        }
+        // 执行
+        init();
+    </script>
+</body>
+
+</html>
