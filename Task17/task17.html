@@ -31,7 +31,7 @@
         #list>div {
             background-color: deepskyblue;
             margin: 0.2vw;
-            font-size: 0.5vw;
+            font-size: 0.8vw;
             color: white;
             text-align: center;
         }
@@ -100,6 +100,7 @@
                     var allDiv = list.querySelectorAll('div');
                     for (var i = 0; i < allDiv.length; i++) {
                         allDiv[i].style.height = arr[i] + '%';
+                        allDiv[i].querySelector('p').innerHTML = arr[i];
                     }
                     break;
                 case 'min':
@@ -109,6 +110,7 @@
                     var allDiv = list.querySelectorAll('div');
                     for (var i = 0; i < allDiv.length; i++) {
                         allDiv[i].style.height = arr[i] + '%';
+                        allDiv[i].querySelector('p').innerHTML = arr[i];
                     }
                     break;
                 default:

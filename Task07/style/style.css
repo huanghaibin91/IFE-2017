@@ -1,0 +1,352 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  color: #787B83; }
+
+button {
+  cursor: pointer; }
+
+.container {
+  width: 1280px;
+  margin: auto; }
+
+header {
+  height: 57px; }
+  header .logo {
+    margin-left: 59px;
+    width: 200px;
+    float: left; }
+    header .logo img {
+      vertical-align: text-bottom; }
+    header .logo span {
+      font: 21px "SinHei";
+      line-height: 57px;
+      padding: 5px; }
+  header nav {
+    width: 450px;
+    float: right;
+    height: 57px; }
+    header nav ul {
+      overflow: hidden;
+      height: 100%;
+      list-style: none; }
+      header nav ul li {
+        width: 65px;
+        float: left;
+        height: 100%;
+        margin: 0 5px; }
+        header nav ul li a {
+          display: block;
+          height: 52px;
+          text-align: center;
+          font: bold 14px "Microsoft YaHei";
+          line-height: 52px; }
+          header nav ul li a:hover {
+            border-bottom: 5px solid #E74F4D;
+            color: #E74F4D; }
+          header nav ul li a.login {
+            color: #E74F4D; }
+            header nav ul li a.login img {
+              vertical-align: text-bottom;
+              padding-right: 5px; }
+
+.banner .ban-1 {
+  position: relative;
+  height: 690px; }
+  .banner .ban-1 img {
+    width: 100%;
+    height: 100%; }
+  .banner .ban-1 div {
+    color: white;
+    position: absolute;
+    top: 224px;
+    left: 114px; }
+    .banner .ban-1 div p.p1 {
+      font: 60px "Microsoft YaHei";
+      margin-bottom: 25px; }
+    .banner .ban-1 div p.p2, .banner .ban-1 div p.p3 {
+      font: 21px "Microsoft YaHei"; }
+    .banner .ban-1 div a {
+      display: block;
+      width: 331px;
+      height: 65px;
+      margin-top: 57px;
+      text-align: center;
+      font: 30px "Microsoft YaHei";
+      background: #E74F4D;
+      color: white;
+      line-height: 65px; }
+.banner .ban-2 {
+  height: 250px;
+  text-align: center; }
+  .banner .ban-2 div {
+    width: 320px;
+    float: left; }
+    .banner .ban-2 div img {
+      padding: 44px; }
+    .banner .ban-2 div p {
+      font: 14px "SimHei";
+      color: #767677;
+      border-right: 1px solid #BBBBBB; }
+    .banner .ban-2 div:nth-child(4) p {
+      border: none; }
+
+.city .city-1 {
+  height: 361px;
+  text-align: center;
+  background-color: #EDECEC; }
+  .city .city-1 img {
+    padding: 89px 0 44px 0; }
+  .city .city-1 p {
+    font: 53px "SimHei";
+    color: #909090; }
+.city .city-2 {
+  height: 341px;
+  text-align: center;
+  background: url("../images/task_1_7_1_r2_c10.gif") no-repeat center; }
+  .city .city-2 p:nth-child(1) {
+    font: 21px "Microsoft YaHei";
+    color: white;
+    padding: 50px 0 5px 0; }
+    .city .city-2 p:nth-child(1) span {
+      padding-bottom: 5px;
+      border-bottom: 3px solid white; }
+  .city .city-2 p:nth-child(2) {
+    font: 12px "Microsoft YaHei";
+    color: white;
+    padding: 23px 0 48px 0; }
+  .city .city-2 .select select, .city .city-2 .select button {
+    width: 236px;
+    height: 36px;
+    border: none;
+    margin-right: 40px;
+    font: 14px "Microsoft YaHei";
+    color: #7E7E7F; }
+  .city .city-2 .select button {
+    background-color: #BF4F49;
+    color: white; }
+
+.active {
+  height: 395px;
+  padding: 100px 0 110px 150px;
+  background-color: #F7F7F7; }
+  .active div {
+    text-align: center;
+    width: 220px;
+    margin-right: 35px;
+    float: left; }
+    .active div p {
+      padding: 10px;
+      font: 16px "Microsoft YaHei";
+      color: #323333; }
+    .active div span {
+      font: 14px "Microsoft YaHei";
+      color: #898A8A;
+      padding-bottom: 5px; }
+    .active div:nth-child(even) p {
+      padding-top: 0; }
+    .active div:nth-child(even) img {
+      padding-top: 10px; }
+
+.main {
+  height: 1088px; }
+  .main .main-1 {
+    height: 567px;
+    text-align: center; }
+    .main .main-1 .img {
+      background: url("../images/task_1_7_1_r2_c15.gif") no-repeat center;
+      width: 849px;
+      height: 100%;
+      font-family: "Microsoft YaHei";
+      color: white;
+      float: left; }
+      .main .main-1 .img p:nth-child(1) {
+        font-size: 50px;
+        padding-top: 128px; }
+      .main .main-1 .img p:nth-child(2) {
+        font-size: 158px; }
+      .main .main-1 .img p:nth-child(3) {
+        font-size: 22px; }
+    .main .main-1 .text {
+      width: 301px;
+      height: 100%;
+      float: right;
+      padding: 0 65px;
+      position: relative; }
+      .main .main-1 .text > img {
+        position: absolute;
+        top: 200px;
+        left: -26px; }
+      .main .main-1 .text h4 {
+        font: 16px "Microsoft YaHei";
+        padding: 158px 0 25px 0; }
+        .main .main-1 .text h4 span {
+          color: #E74F4D; }
+      .main .main-1 .text p {
+        font: 12px "SimSun";
+        color: #AAAAA9;
+        line-height: 2.5; }
+      .main .main-1 .text a {
+        display: inline-block;
+        font: 12px "Microsoft YaHei";
+        color: #E25C5F;
+        border: 1px solid #e25c5f;
+        width: 107px;
+        height: 35px;
+        line-height: 35px;
+        margin: 45px 0 15px 0; }
+      .main .main-1 .text div a {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%; }
+        .main .main-1 .text div a.current {
+          background-color: #929293; }
+  .main .main-2 {
+    height: 521px; }
+    .main .main-2 div {
+      height: 100%;
+      width: 426px;
+      float: left;
+      text-align: center;
+      font: 21px "SimHei"; }
+      .main .main-2 div p {
+        padding: 170px 0 20px 0; }
+      .main .main-2 div div {
+        margin: auto;
+        width: 31px;
+        height: 1px;
+        float: none; }
+      .main .main-2 div a {
+        display: inline-block;
+        width: 170px;
+        height: 44px;
+        line-height: 44px;
+        margin-top: 25px; }
+    .main .main-2 div:nth-child(1) {
+      background-color: #E7504D;
+      color: white; }
+      .main .main-2 div:nth-child(1) div {
+        border-top: 2px solid white; }
+      .main .main-2 div:nth-child(1) a {
+        color: white;
+        border: 1px solid white; }
+    .main .main-2 div:nth-child(2) {
+      position: relative; }
+      .main .main-2 div:nth-child(2) img {
+        position: absolute;
+        top: 200px;
+        right: -26px; }
+      .main .main-2 div:nth-child(2) div {
+        border-top: 2px solid #999; }
+      .main .main-2 div:nth-child(2) a {
+        color: #E7504D;
+        border: 1px solid #E7504D; }
+
+.volunteer {
+  margin: 115px 0 165px 0;
+  overflow: hidden; }
+  .volunteer .vol-1 {
+    text-align: center;
+    margin: 0 0 105px 0; }
+    .volunteer .vol-1 h4 {
+      font: 21px "SimHei"; }
+    .volunteer .vol-1 div {
+      margin: 10px auto;
+      width: 31px;
+      height: 1px;
+      border-top: 2px solid #E7504D; }
+    .volunteer .vol-1 p {
+      font: 12px "Microsoft YaHei";
+      color: #AAAAA9;
+      line-height: 1.5; }
+  .volunteer .vol-2 {
+    width: 300px;
+    float: left;
+    padding: 0 73px 0 173px; }
+    .volunteer .vol-2 div {
+      color: #221814; }
+      .volunteer .vol-2 div h5 {
+        font: 14px "SimHei";
+        margin-bottom: 20px; }
+      .volunteer .vol-2 div p {
+        font: 12px "SimSun";
+        line-height: 2.5; }
+        .volunteer .vol-2 div p a {
+          float: right; }
+    .volunteer .vol-2 div:nth-child(2) {
+      margin: 35px 0 15px 0; }
+  .volunteer .vol-3 {
+    width: 734px;
+    float: right; }
+    .volunteer .vol-3 input {
+      width: 301px;
+      height: 41px;
+      padding-left: 10px;
+      margin-bottom: 15px;
+      border: none;
+      background-color: #EDEDEF; }
+      .volunteer .vol-3 input:nth-child(even) {
+        margin-left: 18px; }
+    .volunteer .vol-3 textarea {
+      width: 625px;
+      height: 100px;
+      padding: 10px;
+      border: none;
+      margin-bottom: 15px;
+      background-color: #EDEDEF; }
+    .volunteer .vol-3 button {
+      border: none;
+      display: block;
+      width: 645px;
+      height: 41px;
+      background: #EDEDEF; }
+
+footer div:nth-child(1) {
+  height: 361px;
+  text-align: center;
+  color: white;
+  background-color: #32353E;
+  overflow: hidden; }
+  footer div:nth-child(1) h4 {
+    margin: 90px 0 10px 0;
+    font: 21px "SimHei"; }
+  footer div:nth-child(1) p {
+    font: 12px "SimSun";
+    line-height: 2; }
+  footer div:nth-child(1) div.email {
+    text-align: center;
+    margin: 27px 0 37px 0; }
+    footer div:nth-child(1) div.email input {
+      border: none;
+      width: 421px;
+      height: 41px;
+      padding-left: 10px; }
+    footer div:nth-child(1) div.email button {
+      position: relative;
+      left: -0.5em;
+      border: none;
+      width: 81px;
+      height: 41px;
+      background-color: #6F7178;
+      color: white; }
+  footer div:nth-child(1) div.icon img {
+    padding: 10px; }
+footer div:nth-child(2) {
+  height: 59px;
+  color: white;
+  font: 12px "SimSun";
+  background-color: #303039; }
+  footer div:nth-child(2) span {
+    padding: 0 20px;
+    position: relative;
+    bottom: -35px; }
+  footer div:nth-child(2) span:nth-child(1) {
+    float: left; }
+  footer div:nth-child(2) span:nth-child(2) {
+    float: right; }
+
+/*# sourceMappingURL=style.css.map */
