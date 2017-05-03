@@ -1,0 +1,438 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  color: #323232; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+ul, ol, li {
+  list-style: none; }
+
+header {
+  height: 57px;
+  background-color: #2189BF; }
+  header > div.left {
+    margin-left: 80px;
+    width: 36px;
+    height: 100%; }
+    header > div.left img {
+      position: relative;
+      top: 10.5px; }
+  header > div.right {
+    margin-right: 50px;
+    height: 28px;
+    position: relative;
+    top: 14.5px; }
+    header > div.right input {
+      width: 253px;
+      height: 28px;
+      padding: 0 30px;
+      border: none;
+      border-radius: 28px;
+      background: url("../images/task_1_9_1_r2_c2.gif") no-repeat 10px center;
+      background-color: white; }
+    header > div.right a {
+      font: 12px "SimhHei";
+      color: white;
+      padding: 0 30px;
+      background: url("../images/task_1_9_1_r2_c3.gif") no-repeat 10px center; }
+
+.container {
+  width: 1281px;
+  margin: auto;
+  overflow: hidden; }
+  .container > div.left {
+    width: 261px;
+    height: 1211px;
+    background-color: #2A2E3D;
+    padding-bottom: 50px; }
+    .container > div.left .title {
+      padding-bottom: 20px; }
+      .container > div.left .title div span {
+        display: inline-block;
+        width: 100px;
+        font: 16px "SimHei"; }
+      .container > div.left .title div span:nth-child(1) {
+        text-align: right;
+        padding-right: 30px; }
+      .container > div.left .title div span:nth-child(2) {
+        padding-left: 30px; }
+      .container > div.left .title div:nth-child(1) {
+        height: 95px; }
+        .container > div.left .title div:nth-child(1) span {
+          height: 95px;
+          color: white;
+          line-height: 95px; }
+          .container > div.left .title div:nth-child(1) span i {
+            width: 47px;
+            height: 47px;
+            margin-top: 19px;
+            display: inline-block;
+            background-clip: content-box;
+            background-color: white;
+            padding: 4px;
+            border-radius: 50%;
+            border: 1px solid white; }
+          .container > div.left .title div:nth-child(1) span:nth-child(1) {
+            width: 110px;
+            padding-right: 10px; }
+      .container > div.left .title div:nth-child(2) span {
+        color: #6D8095; }
+      .container > div.left .title div:nth-child(2) span:nth-child(1) {
+        padding-right: 28px;
+        border-right: 2px solid #313545; }
+    .container > div.left .list {
+      font: 12px "SimHei";
+      color: #6D8095; }
+      .container > div.left .list ul li {
+        padding: 20px 0 20px 50px; }
+      .container > div.left .list ul li:nth-child(1) {
+        background: url("../images/task_1_9_1_r2_c4.gif") no-repeat 30px center; }
+      .container > div.left .list ul li:nth-child(2), .container > div.left .list ul li:nth-child(4), .container > div.left .list ul li:nth-child(5) {
+        background: url("../images/task_1_9_1_r4_c5.gif") no-repeat 30px center; }
+      .container > div.left .list ul li:nth-child(3) {
+        background: url("../images/task_1_9_1_r6_c6.gif") no-repeat 30px center; }
+      .container > div.left .list ul li:nth-child(6) {
+        background: url("../images/task_1_9_1_r10_c7.gif") no-repeat 30px center; }
+  .container > div.right {
+    width: 1020px;
+    height: 1211px;
+    background-color: #EEEEED;
+    padding-bottom: 50px; }
+    .container > div.right .breadcrumb {
+      height: 31px;
+      background-color: white; }
+      .container > div.right .breadcrumb ul {
+        overflow: hidden;
+        padding-left: 25px; }
+        .container > div.right .breadcrumb ul li {
+          float: left;
+          font: 12px "SimHei";
+          color: #AAAAA9;
+          line-height: 31px;
+          padding: 0 6px; }
+        .container > div.right .breadcrumb ul a.active {
+          color: blue; }
+    .container > div.right .main > div {
+      width: 891px;
+      margin: auto; }
+    .container > div.right .main .search {
+      height: 74px;
+      font: 12px "SimHei";
+      color: #AAAAA9;
+      background-color: white;
+      margin: 20px auto 10px auto;
+      border: 1px solid #DDDEE0; }
+      .container > div.right .main .search select {
+        font: 12px "SimHei";
+        color: #323232; }
+      .container > div.right .main .search > div {
+        float: left;
+        padding-top: 7px; }
+      .container > div.right .main .search > div:nth-child(1) {
+        width: 185px;
+        text-align: center; }
+        .container > div.right .main .search > div:nth-child(1) select {
+          width: 71px;
+          height: 26px; }
+      .container > div.right .main .search > div:nth-child(2) {
+        width: 220px;
+        background: url("../images/task_1_9_1_r2_c8.gif") no-repeat 162px center; }
+        .container > div.right .main .search > div:nth-child(2) select {
+          width: 120px;
+          height: 26px;
+          margin-bottom: 8px;
+          margin-left: 10px; }
+      .container > div.right .main .search > div:nth-child(3) {
+        width: 300px; }
+        .container > div.right .main .search > div:nth-child(3) input, .container > div.right .main .search > div:nth-child(3) select {
+          margin-bottom: 8px;
+          margin-left: 10px;
+          height: 24px; }
+        .container > div.right .main .search > div:nth-child(3) input {
+          font: 12px "SimHei";
+          width: 119px;
+          padding-left: 2px; }
+        .container > div.right .main .search > div:nth-child(3) #sel-4, .container > div.right .main .search > div:nth-child(3) #sel-5 {
+          width: 71px; }
+        .container > div.right .main .search > div:nth-child(3) #sel-6 {
+          width: 121px; }
+      .container > div.right .main .search button {
+        width: 51px;
+        height: 26px;
+        border: none;
+        background-color: #388AC1;
+        color: white;
+        font: 12px "SimHei";
+        position: relative;
+        top: 24px;
+        left: 20px;
+        border-radius: 5px; }
+    .container > div.right .main .deal {
+      height: 65px; }
+      .container > div.right .main .deal a, .container > div.right .main .deal ul, .container > div.right .main .deal li, .container > div.right .main .deal div {
+        background-color: white;
+        float: left;
+        text-align: center;
+        height: 65px; }
+      .container > div.right .main .deal a, .container > div.right .main .deal li, .container > div.right .main .deal div {
+        padding: 10px 0;
+        height: 45px;
+        border-left: 1px solid #CED0D4;
+        border-top: 1px solid #CED0D4; }
+      .container > div.right .main .deal a {
+        display: block;
+        width: 30px;
+        margin-right: 4px;
+        line-height: 45px; }
+      .container > div.right .main .deal ul {
+        background-color: #EEEEED; }
+        .container > div.right .main .deal ul li {
+          width: 110px;
+          margin-right: 4px;
+          font: 12px "Microsoft YaHei";
+          color: #323232; }
+          .container > div.right .main .deal ul li i {
+            font-size: 18px;
+            color: #AAAAA9; }
+          .container > div.right .main .deal ul li span {
+            font-size: 21px;
+            color: #EB6400; }
+      .container > div.right .main .deal div {
+        width: 130px;
+        line-height: 45px;
+        font: 12px "Microsoft YaHei";
+        color: #535353; }
+        .container > div.right .main .deal div img {
+          position: relative;
+          top: 7px;
+          padding-right: 5px; }
+    .container > div.right .main .statistics {
+      margin: 20px auto;
+      overflow: hidden; }
+      .container > div.right .main .statistics p {
+        font: 12px "Microsoft YaHei";
+        color: #323232;
+        margin-bottom: 5px; }
+      .container > div.right .main .statistics > div {
+        width: 197px;
+        height: 71px;
+        margin-right: 29px;
+        background-color: white;
+        float: left;
+        border-left: 4px solid; }
+        .container > div.right .main .statistics > div span {
+          font: 12px "SimHei";
+          display: inline-block;
+          height: 47px;
+          position: relative;
+          top: 12.5px;
+          color: #323232;
+          float: left; }
+          .container > div.right .main .statistics > div span i {
+            font-size: 10px;
+            color: #AAAAA9; }
+        .container > div.right .main .statistics > div span:nth-child(1) {
+          width: 110px;
+          padding-top: 10px;
+          padding-left: 10px; }
+        .container > div.right .main .statistics > div span:nth-child(2) {
+          width: 61px; }
+      .container > div.right .main .statistics #one {
+        border-left-color: #43B29D; }
+        .container > div.right .main .statistics #one span:nth-child(2) {
+          background-color: #43B29D; }
+      .container > div.right .main .statistics #two {
+        border-left-color: #388AC1; }
+        .container > div.right .main .statistics #two span:nth-child(2) {
+          background-color: #388AC1; }
+      .container > div.right .main .statistics #three {
+        border-left-color: #D04A36; }
+        .container > div.right .main .statistics #three span:nth-child(2) {
+          background-color: #D04A36; }
+      .container > div.right .main .statistics #four {
+        border-left-color: #E2CD46;
+        margin-right: 0; }
+        .container > div.right .main .statistics #four span:nth-child(2) {
+          background-color: #E2CD46; }
+    .container > div.right .main .box {
+      overflow: hidden; }
+      .container > div.right .main .box > div {
+        background-color: white;
+        border: 1px solid #D8D9DA;
+        border-radius: 5px;
+        float: left;
+        margin-top: 10px; }
+        .container > div.right .main .box > div h4 {
+          font: 12px "SimHei";
+          color: #AAAAA9;
+          height: 40px;
+          padding-left: 20px;
+          line-height: 40px;
+          background-color: #F4F5F7;
+          border-bottom: 1px solid #D8D9DA; }
+      .container > div.right .main .box > div:nth-child(odd) {
+        margin-right: 8px; }
+      .container > div.right .main .box > div:nth-child(1) {
+        width: 529px; }
+        .container > div.right .main .box > div:nth-child(1) ul, .container > div.right .main .box > div:nth-child(1) div {
+          overflow: hidden;
+          width: 489px;
+          margin: 10px auto; }
+        .container > div.right .main .box > div:nth-child(1) ul li {
+          width: 85px;
+          height: 28px;
+          background-color: #ECECEF;
+          float: left;
+          margin-right: 5px;
+          padding-top: 8px;
+          text-align: center;
+          font: 12px "Microsoft YaHei";
+          color: #535353;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px; }
+          .container > div.right .main .box > div:nth-child(1) ul li.active {
+            position: relative;
+            background: white;
+            border: 1px solid #CACBCB;
+            border-bottom: none;
+            z-index: 9; }
+        .container > div.right .main .box > div:nth-child(1) div {
+          width: 414px;
+          padding: 36px;
+          border: 1px solid #CACBCB;
+          border-radius: 5px;
+          border-top-left-radius: 0;
+          position: relative;
+          top: -11px;
+          background-color: white; }
+          .container > div.right .main .box > div:nth-child(1) div table {
+            border-collapse: collapse;
+            width: 403px;
+            height: 186px; }
+            .container > div.right .main .box > div:nth-child(1) div table td {
+              width: 102px;
+              height: 27px;
+              text-align: center;
+              font: 12px "SimSun";
+              color: #535353; }
+            .container > div.right .main .box > div:nth-child(1) div table td:hover {
+              background-color: #ECECEF; }
+      .container > div.right .main .box > div:nth-child(2) {
+        width: 349px;
+        font: 14px "Microsoft YaHei";
+        color: #C2C2C1; }
+        .container > div.right .main .box > div:nth-child(2) span {
+          font: 14px "Microsoft YaHei";
+          color: #535353; }
+        .container > div.right .main .box > div:nth-child(2) > div {
+          width: 281px;
+          margin: auto;
+          border-bottom: 1px solid #CACBCB;
+          padding-top: 15px; }
+          .container > div.right .main .box > div:nth-child(2) > div > p, .container > div.right .main .box > div:nth-child(2) > div > div {
+            padding: 5px; }
+          .container > div.right .main .box > div:nth-child(2) > div > div p {
+            display: inline-block;
+            width: 40%; }
+          .container > div.right .main .box > div:nth-child(2) > div > div p:nth-child(1) {
+            border-top: 1px solid #CACBCB;
+            border-bottom: 1px solid #CACBCB;
+            border-right: 1px solid #CACBCB; }
+          .container > div.right .main .box > div:nth-child(2) > div > div p:nth-child(2) {
+            border-top: 1px solid #CACBCB;
+            border-bottom: 1px solid #CACBCB;
+            margin-left: -0.5em;
+            text-indent: 1em; }
+            .container > div.right .main .box > div:nth-child(2) > div > div p:nth-child(2) span {
+              padding-left: 1em; }
+          .container > div.right .main .box > div:nth-child(2) > div label {
+            padding-right: 128px; }
+        .container > div.right .main .box > div:nth-child(2) div.content {
+          padding-bottom: 90px; }
+        .container > div.right .main .box > div:nth-child(2) div.btn {
+          padding-bottom: 28px;
+          border: none; }
+        .container > div.right .main .box > div:nth-child(2) button {
+          border: none;
+          width: 51px;
+          height: 26px;
+          font: 12px "SimHei";
+          color: white;
+          background: #388AC1; }
+      .container > div.right .main .box > div:nth-child(3) {
+        width: 349px; }
+        .container > div.right .main .box > div:nth-child(3) table, .container > div.right .main .box > div:nth-child(3) div {
+          width: 311px;
+          margin: auto; }
+        .container > div.right .main .box > div:nth-child(3) div {
+          padding: 10px 0; }
+          .container > div.right .main .box > div:nth-child(3) div select, .container > div.right .main .box > div:nth-child(3) div button {
+            width: 65px;
+            height: 23px;
+            font: 12px "SimHei";
+            color: #535353; }
+        .container > div.right .main .box > div:nth-child(3) table {
+          border-collapse: collapse; }
+          .container > div.right .main .box > div:nth-child(3) table thead {
+            height: 29px; }
+          .container > div.right .main .box > div:nth-child(3) table thead tr th {
+            border-top: 1px solid #388AC1;
+            border-bottom: 1px solid #CACBCB; }
+          .container > div.right .main .box > div:nth-child(3) table th, .container > div.right .main .box > div:nth-child(3) table td {
+            width: 44px;
+            height: 44px;
+            font: 12px "SimHei";
+            color: #323232;
+            text-align: center;
+            line-height: 22px;
+            margin: 1px; }
+            .container > div.right .main .box > div:nth-child(3) table th span, .container > div.right .main .box > div:nth-child(3) table td span {
+              color: #C9151D; }
+            .container > div.right .main .box > div:nth-child(3) table th:nth-child(6), .container > div.right .main .box > div:nth-child(3) table th:nth-child(7), .container > div.right .main .box > div:nth-child(3) table td:nth-child(6), .container > div.right .main .box > div:nth-child(3) table td:nth-child(7) {
+              color: #C9151D; }
+          .container > div.right .main .box > div:nth-child(3) table td:hover {
+            background-color: #F7D564; }
+      .container > div.right .main .box > div:nth-child(4) {
+        width: 529px;
+        height: 352px; }
+        .container > div.right .main .box > div:nth-child(4) table {
+          width: 451px;
+          height: 276px;
+          margin: 10px auto;
+          border-collapse: collapse;
+          border-color: #CACBCB; }
+          .container > div.right .main .box > div:nth-child(4) table th {
+            font: 13px "SimHei";
+            color: #221814; }
+          .container > div.right .main .box > div:nth-child(4) table td {
+            font: 12px "SimHei";
+            color: #323232; }
+            .container > div.right .main .box > div:nth-child(4) table td span {
+              display: inline-block;
+              margin-left: 40px;
+              width: 160px;
+              height: 5px;
+              background-color: #CACBCB;
+              position: relative; }
+            .container > div.right .main .box > div:nth-child(4) table td i {
+              display: inline-block;
+              height: 5px;
+              position: absolute;
+              left: 0; }
+          .container > div.right .main .box > div:nth-child(4) table th:nth-child(1), .container > div.right .main .box > div:nth-child(4) table th:nth-child(2), .container > div.right .main .box > div:nth-child(4) table td:nth-child(1), .container > div.right .main .box > div:nth-child(4) table td:nth-child(2) {
+            width: 65px;
+            height: 25px;
+            text-align: center;
+            line-height: 25px; }
+          .container > div.right .main .box > div:nth-child(4) table th:nth-child(3), .container > div.right .main .box > div:nth-child(4) table td:nth-child(3) {
+            text-indent: 2em; }
+
+/*# sourceMappingURL=style.css.map */
