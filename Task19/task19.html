@@ -71,9 +71,10 @@
 
     <!--script-->
     <script>
-        // 先序遍历
+        // 全局变量
         var arr = [];
-
+        var timer = null;
+        // 先序遍历
         function preOrder(ele) {
             if (ele !== null) {
                 arr.push(ele);
@@ -98,14 +99,13 @@
             }
         }
         // 改变颜色
-        var timer = null;
         function changeColor(arr) {
             var i = 0;
             arr[i].style.backgroundColor = "#00FFFF";
             timer = setInterval(function () {
                 i++;
                 if (i < arr.length) {
-                    arr[i - 1].style.backgroundColor = "#FFFFFF";
+                    arr[i - 1].style.backgroundColor = "#FFFFFF"; 
                     arr[i].style.backgroundColor = "#00FFFF";
                 } else {
                     clearInterval(timer);
@@ -120,22 +120,17 @@
             btn.addEventListener('click', function (e) {
                 var target = e.target;
                 clearInterval(timer);
+                arr = [];
                 if (target.tagName == 'BUTTON') {
-                    switch (target.id) {
-                        case 'pre':
-                            preOrder(root);
-                            changeColor(arr);
-                            break;
-                        case 'in':
-                            inOrder(root);
-                            changeColor(arr);
-                            break;
-                        case 'post':
-                            postOrder(root);
-                            changeColor(arr);
-                        break;
-                        default: 
-                        break;
+                    if (target.id == 'pre') {
+                        preOrder(root);
+                        changeColor(arr);
+                    } else if (target.id == 'in') {
+                        inOrder(root);
+                        changeColor(arr);
+                    } else if (target.id == 'post') {
+                        postOrder(root);
+                        changeColor(arr);
                     }
                 }
             }, false);

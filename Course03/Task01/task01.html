@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task 01</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            text-align: center;
+            padding: 50px;
+        }
+
+        label,
+        input,
+        button {
+            margin: 0 20px;
+            font: bold 16px "Microsoft YaiHei";
+        }
+
+        input {
+            padding: 5px 10px;
+        }
+
+        button {
+            background-color: #2F79BA;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+        }
+
+        p {
+            text-align: left;
+            margin: 10px 515px;
+            ;
+            font: 14px "Microsoft YaHei";
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <label for="name">名称</label><input id="name" type="text" placeholder="输入名称"><button id="btn" type="button">验证</button>
+        <p id="result"></p>
+    </div>
+    <!--script-->
+    <script>
+        // 检查名称是否满足条件
+        function check() {
+            var text = document.querySelector('#name').value;
+            var result = document.querySelector('#result');
+            var len = 0;
+            if (text.length == 0) {
+                result.textContent = '姓名不能为空';
+                result.style.color = '';
+            } else {
+                text = text.replace(/[^x00-xff]/g,'AB');
+                for (var i = 0; i < text.length; i++) {
+                    len += 1;
+                }
+                if (4 <= len && len <= 16) {
+                    result.textContent = '名称格式正确';
+                    result.style.color = '#6AB658';
+                } else {
+                    result.textContent = '必填，长度为4~16个字符';
+                    result.style.color = '#E00414';
+                }
+            }
+        }
+        // 初始化
+        function init () {
+            var btn = document.querySelector('#btn');
+            btn.addEventListener('click', function () {
+                check();
+            }, false);
+        }
+        // 执行
+        init();
+    </script>
+</body>
+
+</html>
