@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Task 04</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./style/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h4>听指令的小方块</h4>
+        <div id="box">
+            <div id="block" class="turn-top" style="top: 255PX; left: 255PX;">
+                <div></div>
+            </div>
+        </div>
+        <div id="order">
+            <div><input id="text" type="text" placeholder="请输入命令"><button id="btn">提交</button></div>
+            <p>
+                <span>GO</span>：向红色边所面向的方向前进一格（一格等同于正方形的边长）<br>
+                <span>TUN LEF</span>：向左转（逆时针旋转90度）<br>
+                <span>TUN RIG</span>：向右转（顺时针旋转90度）<br>
+                <span>TUN BAC</span>：向右转（旋转180度）<br>    
+            </p>
+        </div>
+        <!--script-->
+        <script src="./js/index.js"></script>
+    </body>
+</html>

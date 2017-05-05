@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task 02</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font: bold 16px "Microsoft YaiHEi";
+        }
+
+        form {
+            margin: 50px auto;
+            width: 600px;
+        }
+
+        form>div {
+            display: flex;
+        }
+
+        form>div>label {
+            display: block;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            padding: 20px;
+            text-align: right;
+        }
+
+        form>div>div {
+            padding: 20px;
+            width: 500px;
+            position: relative;
+        }
+
+        input {
+            width: 400px;
+            height: 30px;
+            padding: 0 10px;
+            border-radius: 5px;
+            border: 1px solid #A9A9A9;
+        }
+        button {
+            width: 50px;
+            height: 30px;
+            color: white;
+            background-color: #2F79BA;
+            border-radius: 3px;
+            border: none;
+        }
+        span {
+            position: absolute;
+            top: 60px;
+            left: 25px;
+            font-size: 14px;
+        }
+        div {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div>
+            <label for="name">名称</label>
+            <div>
+                <input id="name" type="text">
+                <span></span>
+            </div>
+        </div>
+        <div>
+            <label for="password1">密码</label>
+            <div>
+                <input id="password1" type="password">
+                <span></span>
+            </div>
+        </div>
+        <div>
+            <label for="password2">密码确认</label>
+            <div>
+                <input id="password2" type="password">
+                <span></span>
+            </div>
+        </div>
+        <div>
+            <label for="email">邮箱</label>
+            <div>
+                <input id="email" type="email">
+                <span></span>
+            </div>
+        </div>
+        <div>
+            <label for="phone">手机</label>
+            <div>
+                <input id="phone" type="tel">
+                <span></span>
+            </div>
+        </div>
+    </form>
+    <div>
+        <button type="submit">提交</button>
+    </div>
+    <!--script-->
+    <script>
+        // 字符长度
+        function strLength(str) {
+            var len = 0;
+            str = str.replace(/[^x00-xff]/g, 'AB');
+            for (var i = 0; i < str.length; i++) {
+                len += 1;
+            }
+            return len;
+        }
+        // 检验表单输入
+        var nameFlag = false;
+        var password1Flag = false;
+        var password2Flag = false;
+        var emailFlag = false;
+        var phoneFlag = false;
+        // 检验名称
+        function checkName(target) {
+            var nextEle = target.nextElementSibling;
+            target.onfocus = function () {
+                nextEle.textContent = '必填，长度为4~16个字符';
+                nextEle.style.color = '#A9A9A9';
+            }
+            target.onblur = function () {
+                var len = strLength(target.value);
+                if (len == 0) {
+                    nextEle.textContent = '名称不能为空';
+                    nextEle.style.color = '#DF000C';
+                    target.style.border = '1px solid #DF000C';
+                } else {
+                    if (4 <= len && len <= 16) {
+                        nextEle.textContent = '名称格式正确';
+                        nextEle.style.color = '#60BB46';
+                        target.style.border = '1px solid #60BB46';
+                        nameFlag = true;
+                    } else {
+                        nextEle.textContent = '长度错误，长度为4~16个字符';
+                        nextEle.style.color = '#DF000C';
+                        target.style.border = '1px solid #DF000C';
+                    }
+                }
+            }
+        }
+        // 检查密码
+        function checkPassword(target) {
+            var nextEle = target.nextElementSibling;
+            if (target.id == 'password1') {
+                target.onfocus = function () {
+                    nextEle.textContent = '必填，长度为4~16个字符';
+                    nextEle.style.color = '#A9A9A9';
+                }
+                target.onblur = function () {
+                    var len = strLength(target.value);
+                    if (len == 0) {
+                        nextEle.textContent = '密码不能为空';
+                        nextEle.style.color = '#DF000C';
+                        target.style.border = '1px solid #DF000C';
+                    } else {
+                        if (4 <= len && len <= 16) {
+                            nextEle.textContent = '密码格式正确';
+                            nextEle.style.color = '#60BB46';
+                            target.style.border = '1px solid #60BB46';
+                            password1Flag = true;
+                        } else {
+                            nextEle.textContent = '密码格式错误，长度为4~16个字符';
+                            nextEle.style.color = '#DF000C';
+                            target.style.border = '1px solid #DF000C';
+                        }
+                    }
+                }
+            } else if (target.id == 'password2') {
+                target.onfocus = function () {
+                    nextEle.textContent = '请再次输入相同密码';
+                    nextEle.style.color = '#A9A9A9';
+                }
+                target.onblur = function () {
+                    if (password1Flag) {
+                        var password1 = document.querySelector('#password1');
+                        if (password1.value === target.value) {
+                            nextEle.textContent = '密码输入一致';
+                            nextEle.style.color = '#60BB46';
+                            target.style.border = '1px solid #60BB46';
+                            password2Flag = true;
+                        } else {
+                            nextEle.textContent = '两次密码输入不一致';
+                            nextEle.style.color = '#DF000C';
+                            target.style.border = '1px solid #DF000C';
+                        }
+                    } else {
+                        nextEle.textContent = '密码格式错误，长度为4~16个字符';
+                        nextEle.style.color = '#DF000C';
+                        target.style.border = '1px solid #DF000C';
+                    }
+                }
+            }
+        }
+        // 检查邮箱
+        function checkEmail (target) {
+            var nextEle = target.nextElementSibling;
+            target.onfocus = function () {
+                nextEle.textContent = '输入邮箱地址';
+                nextEle.style.color = '#A9A9A9';
+            }
+            target.onblur = function () {
+                var reg = /[\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?/g;
+                if (reg.test(target.value)) {
+                    nextEle.textContent = '邮箱地址输入正确';
+                    nextEle.style.color = '#60BB46';
+                    target.style.border = '1px solid #60BB46';
+                    emailFlag = true;
+                } else {
+                    nextEle.textContent = '邮箱地址输入错误';
+                    nextEle.style.color = '#DF000C';
+                    target.style.border = '1px solid #DF000C';
+                }
+            }
+        }
+        // 检查手机
+        function checkPhone (target) {
+            var nextEle = target.nextElementSibling;
+            target.onfocus = function () {
+                nextEle.textContent = '输入手机号码';
+                nextEle.style.color = '#A9A9A9';
+            }
+            target.onblur = function () {
+                var reg = /^1[34578]\d{9}$/g;
+                if (reg.test(target.value)) {
+                    nextEle.textContent = '手机号码输入正确';
+                    nextEle.style.color = '#60BB46';
+                    target.style.border = '1px solid #60BB46';
+                    phoneFlag = true;
+                } else {
+                    nextEle.textContent = '手机号码输入错误';
+                    nextEle.style.color = '#DF000C';
+                    target.style.border = '1px solid #DF000C';
+                }
+            }
+        }
+        // 按钮检验
+        function btnCheck () {
+            if (nameFlag && password1Flag && password2Flag && emailFlag && phoneFlag) {
+                alert('输入正确，可以提交！');
+            } else {
+                alert('输入有误，请再次检查后提交！');
+            }
+        }
+        // 初始化
+        function init() {
+            checkName(document.querySelector('#name'));
+            checkPassword(document.querySelector('#password1'));
+            checkPassword(document.querySelector('#password2'));
+            checkEmail(document.querySelector('#email'));
+            checkPhone(document.querySelector('#phone'));
+            document.querySelector('button').addEventListener('click', function () {
+                btnCheck();
+            }, false);
+        }
+        // 执行
+        init();
+    </script>
+</body>
+
+</html>

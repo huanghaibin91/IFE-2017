@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Task 03</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            div {
+                width: 500px;
+                margin: 50px auto;
+                text-align: center;
+                font: bold 16px "Microsoft YaHei"; 
+            }
+            label, select {
+                margin: 10px;
+            }
+            select {
+                width: 100px;
+                height: 20px;
+            }
+            input[type="text"] {
+                width: 200px;
+                height: 20px;
+                margin: 10px;
+            }
+            #company {
+                display: none;
+            }
+            #scList {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <label><input id="in" type="radio" name="student" value="in">在校生</label>
+            <label><input id="out" type="radio" name="student" value="out">非在校生</label>
+        </div>
+        <div id="school">
+            学校
+            <select id="city">
+                <option value="北京">北京</option>
+                <option value="四川">上海</option>
+            </select>
+            <select id="bjList">
+                    <option value="清华大学">清华大学</option>
+                    <option value="北京大学">北京大学</option>
+            </select>
+            <select id="scList">
+                <option value="四川大学">四川大学</option>
+                <option value="西南交通大学">西南交通大学</option>
+                <option value="电子科技大学">电子科技大学</option>
+            </select>
+        </div>
+        <div id="company">
+            就业单位<input type="text">
+        </div>
+        <!--script-->
+        <script>
+            // 切换选项
+            function change () {
+                var radio = document.getElementsByName('student');
+                var school = document.querySelector('#school');
+                var company = document.querySelector('#company');
+                radio.forEach(function (ele) {
+                    if (ele.checked) {
+                        if (ele.value == 'in') {
+                            school.style.display = 'block';
+                            company.style.display = 'none';
+                        } else if (ele.value = 'out') {
+                            school.style.display = 'none';
+                            company.style.display = 'block';
+                        }
+                    }
+                });
+            }
+            // 初始化
+            function init () {
+                var radio = document.getElementsByName('student');
+                radio.forEach(function (ele) {
+                    ele.addEventListener('click', function () {
+                        change();
+                    }, false);
+                });
+                var city = document.querySelector('#city');
+                city.addEventListener('click', function () {
+                    var bjList = document.querySelector('#bjList');
+                    var scList = document.querySelector('#scList');
+                    if (city.value == '北京') {
+                        bjList.style.display = 'inline';
+                        scList.style.display = 'none';
+                    } else if (city.value == '四川') {
+                        bjList.style.display = 'none';
+                        scList.style.display = 'inline';
+                    }
+                }, false);
+            }
+            // 执行
+            init();
+        </script>
+    </body>
+</html>

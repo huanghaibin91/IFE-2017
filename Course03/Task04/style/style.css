@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+h4 {
+    margin: 20px;
+    text-align: center;
+}
+#box {
+    width: 510px;
+    height: 510px;
+    margin: 10px auto;
+    border: 2px solid black;
+    background: #eee;
+    position: relative;
+}
+#order>div, #order>p {
+    width: 500px;
+    margin: 10px auto;
+    text-align: center;
+}
+#order>p span {
+    color: red;
+}
+#text {
+    width: 100px;
+    height: 20px;
+    margin: 10px;
+    padding: 5px;
+}
+#btn {
+    width: 50px;
+    height: 30px;
+    color: white;
+    background-color: #2F79BA;
+    border-radius: 3px;
+    border: none;
+}
+#block {
+    width: 50px;
+    height: 50px;
+    background: blue;
+    position: absolute;
+    transition: all 1s ease;
+}
+#block>div {
+    width: 100%;
+    height: 20%;
+    background: red;
+}
+.cell {
+    width: 50px;
+    height: 50px;
+    float: left;
+    border-right: 1px solid #999;
+    border-bottom: 1px solid #999;
+}
+.top {
+    transform: translate(0, -51px);
+}
+.right {
+    transform: translate(51px, 0);
+}
+.bottom {
+    transform: translate(0, 51px);
+}
+.left {
+    transform: translate(-51px, 0);
+}
+.turn-top {
+    transform: rotate(0deg);
+}
+.turn-right {
+    transform: rotate(90deg);
+}
+.turn-bottom {
+    transform: rotate(180deg);
+}
+.turn-left {
+    transform: rotate(270deg);
+}
