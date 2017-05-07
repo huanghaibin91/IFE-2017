@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.hidden {
+    overflow: hidden;
+}
+#box {
+    margin: 50px auto;
+    text-align: center;
+    height: 1000px;
+}
+#screen {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background: #ccc;
+    display: none;
+}
+#message {
+    width: 400px;
+    height: 300px;
+    border: 2px solid black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+#message p {
+    background: #585858;
+    height: 40px;
+    padding: 0 30px;
+    color: white;
+    font: 16px "Microsoft YaHei";
+    line-height: 40px;
+    cursor: move;
+}
+#div1 {
+    height: 170px;
+    padding: 20px;
+}
+#div2 {
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+button {
+    padding: 5px;
+    font: bold 14px "Microsoft YaHei";
+    color: white;
+    background-color: #2F79BA;
+    border-radius: 3px;
+    border: none;
+}

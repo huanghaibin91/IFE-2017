@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task 06</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        div {
+            text-align: center;
+            margin: 50px auto;
+        }
+
+        div span {
+            display: inline-block;
+            height: 50px;
+            margin: 5px;
+            padding: 0 5px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 50px;
+            color: white;
+            background-color: #3366FF;
+        }
+        input, button {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <textarea id="input" rows="5" cols="20"></textarea><br>
+        <button type="button" id="left-in">左侧进</button>
+        <button type="button" id="right-in">右侧进</button>
+        <button type="button" id="left-out">左侧出</button>
+        <button type="button" id="right-out">右侧出</button><br>
+        <input type="text" id="checkText"><button id="check">查询</button>
+        <div id="list">
+        </div>
+    </div>
+    <!--script-->
+    <script>
+        // 添加删除元素
+        function list(target, value) {
+            var list = document.querySelector('#list');
+            var id = target.id;
+            var span = document.createElement('span');
+            span.innerHTML = value;
+            switch (id) {
+                case 'left-in':
+                    if (value !== '') {
+                        list.insertBefore(span, document.querySelector('span'));
+                    }
+                    break;
+                case 'right-in':
+                    if (value !== '') {
+                        list.appendChild(span);
+                    }
+                    break;
+                case 'left-out':
+                    list.removeChild(document.querySelector('span'));
+                    break;
+                case 'right-out':
+                    list.removeChild(list.lastChild);
+                    break;
+                case 'check':
+                    var ospan = list.querySelectorAll('span');
+                    var arr = [];
+                    var reg = new RegExp(document.querySelector('#checkText').value);
+                    for (var i = 0; i < ospan.length; i++) {
+                        if (reg.test(ospan[i].innerText)) {
+                            arr.push(ospan[i]);
+                        }
+                    } 
+                    arr.forEach(function(ele) {
+                        ele.style.backgroundColor = '#e91e63';
+                    });
+                    break;
+                default:
+                    break;
+            }
+        }
+        // 点击按钮
+        function init() {
+            var box = document.querySelector('#box');
+            box.addEventListener('click', function (e) {
+                var input = document.querySelector('#input');
+                var target = e.target;
+                if (target.tagName == 'BUTTON') {
+                    list(target, input.value);
+                    input.value = '';
+                }
+            }, false);
+        }
+        // 执行
+        init();
+    </script>
+</body>
+
+</html>

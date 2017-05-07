@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Task 07</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .box {
+                width: 1000px;
+                margin: 50px auto;
+            }
+            table {
+                border-collapse: collapse;
+                width: 500px;
+                margin: 20px auto;
+            }
+            thead {
+                font: bold 16px "Microsoft YaHei";
+                color: white;
+                background: #6994A5;
+            }
+            th {
+                height: 50px;
+                line-height: 50px;
+                position: relative;
+            }
+            td {
+                font: 16px "Microsoft YaHei";
+                text-align: center;
+                height: 50px;
+                line-height: 50px;
+            }
+            button {
+                display: inline-block;
+                width: 0;
+                height: 0;
+                border: 10px solid;
+                position: absolute;
+                cursor: pointer;
+            }
+            .top {
+                border-color: #6994A5 #6994A5 white #6994A5;
+                top: 3px;
+                left: 70px;
+            }
+            .bottom {
+                border-color: white #6994A5 #6994A5 #6994A5;
+                top: 27px;
+                left: 70px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>姓名</th>
+                        <th>
+                            语文
+                            <button class="top" title="从大到小排列"></button>
+                            <button class="bottom" title="从小到大排列"></button>
+                        </th>
+                        <th>
+                            数学
+                            <button class="top" title="从大到小排列"></button>
+                            <button class="bottom" title="从小到大排列"></button>
+                        </th>
+                        <th>
+                            英语
+                            <button class="top" title="从大到小排列"></button>
+                            <button class="bottom" title="从小到大排列"></button>
+                        </th>
+                        <th>
+                            总分
+                            <button class="top" title="从大到小排列"></button>
+                            <button class="bottom" title="从小到大排列"></button>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>小明</td>
+                        <td>80</td>
+                        <td>90</td>
+                        <td>70</td>
+                        <td>240</td>
+                    </tr>
+                    <tr>
+                        <td>小红</td>
+                        <td>90</td>
+                        <td>60</td>
+                        <td>90</td>
+                        <td>240</td>
+                    </tr>
+                    <tr>
+                        <td>小亮</td>
+                        <td>60</td>
+                        <td>100</td>
+                        <td>70</td>
+                        <td>230</td>
+                    </tr>
+                    <tr>
+                        <td>小王</td>
+                        <td>77</td>
+                        <td>95</td>
+                        <td>60</td>
+                        <td>222</td>
+                    </tr>
+                    <tr>
+                        <td>小丽</td>
+                        <td>80</td>
+                        <td>90</td>
+                        <td>85</td>
+                        <td>255</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--script-->
+        <script src="index.js"></script>
+    </body>
+</html>

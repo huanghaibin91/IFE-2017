@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task 09</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #root {
+            border: 1px solid black;
+            width: 1200px;
+            height: 300px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #root div {
+            border: 1px solid black;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 70%;
+        }
+
+        .btn {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <div id="root">
+            super
+            <div>
+                car
+                <div>
+                    apple
+                    <div>pear</div>
+                    <div>pig</div>
+                    <div>cola</div>
+                    <div>soccer</div>
+                </div>
+                <div>phone</div>
+                <div>
+                    <div>book</div>
+                    <div>school</div>
+                </div>
+            </div>
+            <div>
+                note
+                <div>
+                    human
+                    <div>code</div>
+                    <div>operate</div>
+                    <div>man</div>
+                </div>
+                <div>
+                    program
+                    <div>
+                        element
+                        <div>cat</div>
+                    </div>
+                    <div>gess</div>
+                </div>
+            </div>
+            <div>fish</div>
+        </div>
+    </div>
+    <div class="btn">
+        <button id="depth">深度遍历</button>
+        <button id="breadth">广度遍历</button>
+        <input id="searchText" type="text" placeholder="输入要搜索的文字">
+        <button id="depthSearch">深度遍历搜索</button>
+        <button id="breadthSearch">广度遍历搜索</button>
+        <input id="addText" type="text" placeholder="输入要添加元素的文字">
+        <button id="add">添加</button>
+        <button id="delete">删除</button>
+    </div>
+    <!--script-->
+    <script>
+        // 全局变量
+        var eleArr = [];
+        var textArr = [];
+        var timer = null;
+        var index = 0;
+        // 深度遍历
+        function depth(ele) {
+            if (ele !== null) {
+                eleArr.push(ele);
+                textArr.push(ele.firstChild.nodeValue.trim());
+                for (var i = 0; i < ele.children.length; i++) {
+                    depth(ele.children[i]);
+                }
+            }
+        }
+        // 广度遍历
+        function breadth(ele) {
+            if (ele !== null) {
+                eleArr.push(ele);
+                textArr.push(ele.firstChild.nodeValue.trim());
+                breadth(ele.nextElementSibling);
+                ele = eleArr[index++];
+                breadth(ele.firstElementChild);
+            }
+        }
+        // 改变颜色,并搜索文本
+        function changeColor(flag) {
+            var i = 0;
+            var text = document.querySelector('#searchText');
+            eleArr[i].style.backgroundColor = "#00FFFF";
+            timer = setInterval(function () {
+                i++;
+                if (i < eleArr.length) {
+                    eleArr[i - 1].style.backgroundColor = "#FFFFFF"; 
+                    eleArr[i].style.backgroundColor = "#00FFFF";
+                    if (flag) {
+                        if (text.value == textArr[i]) {
+                            clearInterval(timer);
+                        }
+                    }
+                } else {
+                    clearInterval(timer);
+                    eleArr[eleArr.length - 1].style.backgroundColor = "#FFFFFF";
+                }
+            }, 1000);
+        }
+        // 初始化
+        function init () {
+            var box = document.querySelector('#box');
+            var root = document.querySelector('#root');
+            var btn = document.querySelector('.btn');
+            var targetEle = null;
+            // 点击变色
+            root.addEventListener('click', function (e) {
+                var div = box.querySelectorAll('div');
+                for (var i = 0; i < div.length; i++) {
+                    div[i].style.backgroundColor = '#FFFFFF';
+                }
+                e.target.style.backgroundColor = '#FF0000';
+                targetEle = e.target;
+            }, false);
+            // 点击搜素
+            btn.addEventListener('click', function (e) {
+                var target = e.target;
+                clearInterval(timer);
+                eleArr = [];
+                textArr = [];
+                if (target.tagName == 'BUTTON') {
+                    if (target.id == 'depth') {
+                        depth(root);
+                        changeColor(false);
+                    } else if (target.id == 'breadth') {
+                        breadth(root);
+                        changeColor(false);
+                    } else if (target.id == 'depthSearch') {
+                        depth(root);
+                        changeColor(true);
+                    } else if (target.id == 'breadthSearch') {
+                        breadth(root);
+                        changeColor(true);
+                    } else if (target.id == 'add') {
+                        var addText = document.querySelector('#addText').value;
+                        var addEle = document.createElement('div');
+                        addEle.innerText = addText;
+                        targetEle.append(addEle);
+                        addText = '';
+                    } else if (target.id == 'delete') {
+                        var parent = targetEle.parentNode;
+                        var removeEle = null;
+                        console.log(parent);
+                        console.log(parent.children);
+                        for (var i = 0; i < parent.children.length; i++) {
+                            if (parent.children[i].firstChild.nodeValue.trim() == targetEle.firstChild.nodeValue.trim()) {
+                                removeEle = parent.children[i];
+                            }
+                        }
+                        parent.removeChild(removeEle);
+                    }
+                }
+            }, false);
+        }
+        // 执行
+        init();
+    </script>
+</body>
+
+</html>
