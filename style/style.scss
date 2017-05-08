@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    width: 1000px;
+    margin: auto;
+    background: #e8f1f5;
+}
+header {
+    height: 40px;
+    div {
+        width: 160px;
+        float: right;
+        a {
+            display: block;
+            width: 140px;
+            height: 35px;
+            color: #404040;
+            padding: 0 10px 0 0;
+            line-height: 35px;
+            img {
+                position: relative;
+                padding: 0 10px;
+                top: 2px;
+            }
+        }
+        a:hover {
+            border-bottom: 5px solid #ff4545;
+        }
+    }
+}
+.banner {
+    height: 400px;
+    background: url("./wallhaven-512644.png") no-repeat center;
+    background-size: cover;
+} 
+.main {
+    >div {
+        &:hover {
+            h4 {
+                span.name {
+                    left: 0;
+                }
+                span.words {
+                    left: 0;
+                }
+            }
+        }
+        h4 {
+            width: 300px;
+            margin: 20px auto;
+            border-bottom: 2px solid #004a7c;
+            padding: 10px 0;
+            text-align: center;
+            overflow: hidden;
+            span {
+                display: inline-block;
+                margin: 0 10px;
+            }
+            .name {
+                font: bold 20px "Microsoft YaHei"; 
+                color: #004a7c;
+                position: relative;
+                left: 85px;
+                transition: all 2s linear;
+            }
+            .words {
+                font: 16px "Microsoft YaHei";
+                color: #005691;
+                position: relative;
+                left: 180px;
+                transition: all 2s ease;
+            }
+        }
+        >div {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            p {
+                width: 480px;;
+                margin: 10px 10px;
+                padding: 10px 0;
+                float: left;
+                a {
+                    display: inline-block;
+                }
+                a:nth-child(1) {
+                    width: 418px;
+                    text-indent: 1em;
+                    color: #404040;
+                    border-left: 2px solid #404040;
+                }
+                a:nth-child(2) {
+                    width: 48px;
+                    padding: 5px;
+                    border: 1px solid #393e46;
+                    transform: scale(0);
+                    transition: all 1s;
+                    &:hover {
+                        background: #e79a58;
+                        color: white;
+                    }
+                }
+            }
+            p:hover {
+                a:nth-child(2) {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
+footer {
+    height: 50px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    background: #393e46;
+}

@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+.container {
+  width: 1000px;
+  margin: auto;
+  background: #e8f1f5; }
+
+header {
+  height: 40px; }
+  header div {
+    width: 160px;
+    float: right; }
+    header div a {
+      display: block;
+      width: 140px;
+      height: 35px;
+      color: #404040;
+      padding: 0 10px 0 0;
+      line-height: 35px; }
+      header div a img {
+        position: relative;
+        padding: 0 10px;
+        top: 2px; }
+    header div a:hover {
+      border-bottom: 5px solid #ff4545; }
+
+.banner {
+  height: 400px;
+  background: url("./wallhaven-512644.png") no-repeat center;
+  background-size: cover; }
+
+.main > div:hover h4 span.name {
+  left: 0; }
+.main > div:hover h4 span.words {
+  left: 0; }
+.main > div h4 {
+  width: 300px;
+  margin: 20px auto;
+  border-bottom: 2px solid #004a7c;
+  padding: 10px 0;
+  text-align: center;
+  overflow: hidden; }
+  .main > div h4 span {
+    display: inline-block;
+    margin: 0 10px; }
+  .main > div h4 .name {
+    font: bold 20px "Microsoft YaHei";
+    color: #004a7c;
+    position: relative;
+    left: 85px;
+    transition: all 2s linear; }
+  .main > div h4 .words {
+    font: 16px "Microsoft YaHei";
+    color: #005691;
+    position: relative;
+    left: 180px;
+    transition: all 2s ease; }
+.main > div > div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  .main > div > div p {
+    width: 480px;
+    margin: 10px 10px;
+    padding: 10px 0;
+    float: left; }
+    .main > div > div p a {
+      display: inline-block; }
+    .main > div > div p a:nth-child(1) {
+      width: 418px;
+      text-indent: 1em;
+      color: #404040;
+      border-left: 2px solid #404040; }
+    .main > div > div p a:nth-child(2) {
+      width: 48px;
+      padding: 5px;
+      border: 1px solid #393e46;
+      transform: scale(0);
+      transition: all 1s; }
+      .main > div > div p a:nth-child(2):hover {
+        background: #e79a58;
+        color: white; }
+  .main > div > div p:hover a:nth-child(2) {
+    transform: scale(1); }
+
+footer {
+  height: 50px;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  background: #393e46; }
+
+/*# sourceMappingURL=style.css.map */
