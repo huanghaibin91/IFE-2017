@@ -13,11 +13,11 @@ a {
 header {
   height: 40px; }
   header div {
-    width: 160px;
+    width: 180px;
     float: right; }
     header div a {
       display: block;
-      width: 140px;
+      width: 160px;
       height: 35px;
       color: #404040;
       padding: 0 10px 0 0;
